@@ -1,0 +1,14 @@
+pipeline{
+    agent any
+    stages{
+        stage('Parallel-1'){
+            parallel{
+                stage('stage -1'){
+                    steps{
+                        echo "Welcome.. to the parallel pipeline"
+                    }
+                }
+            }
+        }
+    }
+}
