@@ -3,7 +3,8 @@ pipeline{
     stages{
         stage('install nginx'){
             steps{
-                sh 'sudo apt install nginx -y'
+                sh 'sudo -i'
+                sh 'apt install nginx -y'
             }
         }    
         stage('deploy index'){
