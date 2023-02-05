@@ -3,6 +3,7 @@ pipeline{
     stages{
         stage('install nginx'){
             steps{
+                sh 'apt-get update'
                 sh 'apt install nginx -y'
             }
         }    
